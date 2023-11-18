@@ -15,3 +15,19 @@ a {
   padding: 0;
   margin: 0;
 }
+
+@font-face {
+  font-family: 'Ambit';
+  src: url(../public/fonts/Ambit-Black.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url(../public/fonts/Poppins-Light.ttf), url(../public/fonts/Poppins-Regular.ttf),
+    url(../public/fonts/Poppins-Medium.ttf),
+    url(../public/fonts/Poppins-SemiBold.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
