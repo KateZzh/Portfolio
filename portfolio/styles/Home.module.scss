@@ -1,15 +1,17 @@
 .section {
-  margin: 48px auto;
+  padding: 48px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 40px;
+  max-width: 595px;
 
   .mainInfo {
     border-radius: 24px;
     background: radial-gradient(205.3% 154.51% at 91.33% -10.25%, #212225 0%, #1f2025 100%);
     display: flex;
+    justify-content: space-between;
     padding: 24px;
-    gap: 32px;
 
     .imgAvatar {
       background-image: url(../public/avatar.png);
@@ -17,10 +19,19 @@
       background-size: contain;
       width: 84px;
       height: 85px;
+
+      @media screen and (max-width: 360px) {
+        width: 67px;
+        height: 68px;
+      }
     }
 
     .contacts {
       max-width: 340px;
+
+      @media screen and (max-width: 475px) {
+        max-width: 60%;
+      }
 
       h2 {
         color: #f5f8ff;
@@ -29,6 +40,15 @@
         letter-spacing: 0.48px;
         text-transform: uppercase;
         padding-bottom: 10px;
+
+        @media screen and (max-width: 525px) {
+          font-size: 20px;
+          padding-bottom: 6px;
+        }
+
+        @media screen and (max-width: 360px) {
+          font-size: 16px;
+        }
       }
 
       div {
@@ -39,14 +59,27 @@
         line-height: 160%;
         letter-spacing: 0.24px;
 
+        @media screen and (max-width: 475px) {
+          flex-direction: column;
+          gap: 2px;
+        }
+
         .form {
           color: #c2c2c2;
           font: 400 12px Poppins;
+
+          @media screen and (max-width: 420px) {
+            font-size: 9px;
+          }
         }
 
         .info {
           color: #f5f8ff;
           font: 600 12px Poppins;
+
+          @media screen and (max-width: 420px) {
+            font-size: 9px;
+          }
         }
       }
     }
@@ -120,8 +153,13 @@
       background: radial-gradient(205.3% 154.51% at 91.33% -10.25%, #212225 0%, #1f2025 100%);
 
       display: grid;
-      grid-template-columns: 218px 218px;
+      grid-template-columns: 50% 50%;
       padding: 24px;
+
+      @media screen and (max-width: 425px) {
+        display: flex;
+        flex-direction: column;
+      }
 
       p {
         color: #f5f8ff;
@@ -129,6 +167,7 @@
         line-height: 190%;
         letter-spacing: 1.2px;
         opacity: 0.85;
+        // max-width: 150px;
       }
     }
 
@@ -156,6 +195,10 @@
 
         .educationList {
           max-width: 310px;
+
+          @media screen and (max-width: 505px) {
+            max-width: 70%;
+          }
 
           .title {
             color: #f5f8ff;
@@ -212,6 +255,11 @@
         padding: 24px;
         gap: 24px;
         align-items: center;
+
+        @media screen and (max-width: 375px) {
+          flex-direction: column;
+          text-align: center;
+        }
 
         .qrCode {
           background-image: url(../public/qrCode.png);
