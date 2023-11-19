@@ -35,7 +35,11 @@ export default function Home() {
                 <p className={style.jobTitle}>{el.jobTitle}</p>
                 <p className={style.company}>{el.company}</p>
                 <p className={style.timePeriod}>{el.timePeriod}</p>
-                <p className={style.describe}>{el.describe}</p>
+                <div className={style.describe}>
+                  {el.describe.map((el, i) => (
+                    <li key={i}>{el}</li>
+                  ))}
+                </div>
               </div>
             ))}
           </div>
@@ -46,9 +50,7 @@ export default function Home() {
 
           <div className={style.mainSkills}>
             {arrMainSkills.map((el, i) => (
-              <div key={i}>
-                <p>{el}</p>
-              </div>
+              <p key={i}>{el}</p>
             ))}
           </div>
 
@@ -60,9 +62,7 @@ export default function Home() {
                 <h3 className={style.title}>Education</h3>
 
                 {arrEducationList.map((el, i) => (
-                  <div key={i}>
-                    <p>{el}</p>
-                  </div>
+                  <li key={i}>{el}</li>
                 ))}
               </div>
             </div>
@@ -72,9 +72,7 @@ export default function Home() {
 
               <div className={style.languagesList}>
                 {arrLanguagesList.map((el, i) => (
-                  <div key={i}>
-                    <p>{el}</p>
-                  </div>
+                  <p key={i}>{el}</p>
                 ))}
               </div>
             </div>

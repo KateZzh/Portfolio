@@ -155,6 +155,8 @@
         }
 
         .educationList {
+          max-width: 310px;
+
           .title {
             color: #f5f8ff;
             font: 500 16px Poppins;
@@ -162,17 +164,15 @@
             letter-spacing: 1.2px;
             opacity: 0.84;
             padding-bottom: 2px;
-            max-width: 218px;
           }
 
-          p {
+          li {
             color: #f5f8ff;
             font: 400 12px Poppins;
             line-height: 140%;
             letter-spacing: 1.2px;
             opacity: 0.84;
             padding-bottom: 10px;
-            max-width: 400px;
           }
         }
       }
